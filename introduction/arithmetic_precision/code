@@ -3,7 +3,7 @@
 
 double convertToEuro(double dollars)
 {
-    const double rate = 0.91;
+    const double rate = 0.94;
     double result = dollars * rate;         // (1) Hitung dulu nilai
 
     // (2) Baru atur format pada cout saat mencetak
