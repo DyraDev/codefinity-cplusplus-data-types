@@ -1,0 +1,16 @@
+#include <iostream>
+
+int calculatePayment(double distance_km, int rate_per_km) {
+    int distance_km_int = distance_km * 1;
+    int payment_exact = distance_km_int * rate_per_km;
+    return payment_exact;   
+}
+
+int main() {
+    double distance_km = 12.4;
+    int rate_per_km = 6;
+
+    std::cout << calculatePayment(distance_km, rate_per_km);
+
+    return 0;
+}
