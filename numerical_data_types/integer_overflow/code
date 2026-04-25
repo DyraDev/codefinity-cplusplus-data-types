@@ -1,0 +1,16 @@
+#include <iostream>
+
+long sumViews(int platform1, int platform2) {
+    long platform1Long = platform1;
+    long platform2Long = platform2;
+    long totalViews = platform1Long + platform2Long; 
+    return totalViews;
+}
+
+int main() {
+    int platform1 = 1502365230; 
+    int platform2 = 1262530350; 
+
+    std::cout << "Total views: " << sumViews(platform1, platform2) << std::endl;
+    return 0;
+}
