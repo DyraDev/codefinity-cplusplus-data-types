@@ -1,0 +1,12 @@
+#include <iostream>
+
+std::string createFullAddress(std::string street, std::string city, std::string country) {
+    street.append(", ").append(city).append(", ").append(country);
+    return street;
+}
+
+int main() {
+    std::cout << createFullAddress("123 Streeet", "New York", "USA") << std::endl;
+    std::cout << createFullAddress("456 Main St", "Los Angeles", "USA") << std::endl;
+    return 0;
+}
