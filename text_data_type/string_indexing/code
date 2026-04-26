@@ -1,0 +1,18 @@
+#include <iostream>
+
+std::string maskEmail(std::string email) {
+    int atPos = email.find('@');
+    if (email.length() <= 1) return email;
+
+    for (int i = 1; i < atPos; i++) {
+        email[i] = '*';
+    }
+    return email;
+}
+
+int main() {
+    std::cout << maskEmail("alex@example.com") << std::endl; // a***@example.com
+    std::cout << maskEmail("bob@example.com") << std::endl;  // b**@example.com
+    std::cout << maskEmail("x@domain.com") << std::endl;     // x@domain.com
+    return 0;
+}
