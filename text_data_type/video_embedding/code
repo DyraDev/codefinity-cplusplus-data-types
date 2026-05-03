@@ -1,0 +1,16 @@
+#include <iostream>
+
+std::string censorComment(std::string comment, std::string forbiddenWord) {
+    int pos = comment.find(forbiddenWord);
+    if (pos != -1) {
+        comment.replace(pos, forbiddenWord.length(), "***");
+    }
+    return comment;
+}
+
+int main() {
+    std::cout << censorComment("This movie is stupid", "stupid") << std::endl; // This movie is ***
+    std::cout << censorComment("I hate bugs in code", "hate") << std::endl;    // I *** bugs in code
+    std::cout << censorComment("What a nice day", "bad") << std::endl;          // What a nice day (no change)
+    return 0;
+}
