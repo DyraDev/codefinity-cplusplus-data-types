@@ -1,0 +1,22 @@
+#include <iostream>
+
+bool isAllowedEmail(const std::string& email) {
+    int atPos = email.rfind('@');
+    if (atPos == -1) return false;
+
+    std::string domain;
+    for (int i = atPos + 1; i < email.length(); i++) {
+        domain += email[i];
+    }
+
+    if (domain == "codefinity.com") return true;
+    return false;
+}
+
+int main() {
+    std::cout << isAllowedEmail("alice@example.com") << std::endl;       // false
+    std::cout << isAllowedEmail("bob@codefinity.com") << std::endl;      // true
+    std::cout << isAllowedEmail("john.doe@gmail.com") << std::endl;      // false
+    std::cout << isAllowedEmail("noatdomain.com") << std::endl;          // false
+    return 0;
+}
